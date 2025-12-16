@@ -1,0 +1,16 @@
+import random
+
+length = int(input("length of the password"))
+
+letters = "abcdefghijklmnopqrstuvwxyz"
+numbers = "0123456789"
+
+password = ""
+
+for i in range(length):
+    if i % 2 == 0:
+        password = password + random.choice(letters)
+    else:
+        password = password + random.choice(numbers)
+
+print("Your secure password is:", password)
